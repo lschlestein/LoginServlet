@@ -8,7 +8,7 @@
         <property name="hibernate.connection.password">1234</property>
 
         <!-- Configurações do Hibernate -->
-        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
 
         <!-- Mapeamento de Classe -->
