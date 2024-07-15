@@ -62,16 +62,20 @@ public class ClientController extends HttpServlet {
         switch (action) {
             case "/index":
                 request.getRequestDispatcher("index.jsp").forward(request, response);
+                break;
             case "/listAllClients": {
                 List<Client> clients = clientDAO.findAll();
                 request.setAttribute("clients", clients);
                 request.getRequestDispatcher("listAllClients.jsp").forward(request, response);
+                break;
             }
             case "/login":
                 request.getRequestDispatcher("login.jsp").forward(request, response);
+                break;
             case "/logout": {
                 request.getSession().invalidate();
                 request.getRequestDispatcher("login.jsp").forward(request, response);
+                break;
             }
         }
     }
