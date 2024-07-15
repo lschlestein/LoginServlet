@@ -14,17 +14,17 @@
 <body>
 <header>
     <c:choose>
-        <c:when test="${not empty user}">
-            <p>Usuário autenticado: ${user.name}</p>
+        <c:when test="${not empty client}">
+            <p>Current Client: ${client.name}</p>
             <a href="logout">Logout</a>
         </c:when>
         <c:otherwise>
-            <p>Usuário não autenticado</p>
+            <p>Client not logged:</p>
             <a href="login">Login</a>
         </c:otherwise>
     </c:choose>
 </header>
-<h1>Welcome ${user.name} your email is ${user.email}</h1>
-<a href="/listAllUsers">See all Users</a>
+<h1>Welcome ${client.name} your email is ${client.email}</h1>
+<a href="/listAllClients">See all Clients</a>
 </body>
 </html>

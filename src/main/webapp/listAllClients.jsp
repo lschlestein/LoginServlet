@@ -14,21 +14,21 @@
 <body>
 <header>
     <c:choose>
-        <c:when test="${not empty user}">
-            <p>Usuário autenticado: ${user.name}</p>
+        <c:when test="${not empty client}">
+            <p>Current Client: ${client.name}</p>
             <a href="logout">Logout</a>
         </c:when>
         <c:otherwise>
-            <p>Usuário não autenticado</p>
+            <p>Client not logged:</p>
             <a href="login">Login</a>
         </c:otherwise>
     </c:choose>
 </header>
-<h2>Users in Database</h2>
+<h2>Clients in Database</h2>
 <ul>
-    <c:if test="${not empty user}">
-        <c:forEach items="${users}" var="user">
-            <li>${user}</li>
+    <c:if test="${not empty client}">
+        <c:forEach items="${clients}" var="client">
+            <li>${client}</li>
         </c:forEach>
     </c:if>
 </ul>

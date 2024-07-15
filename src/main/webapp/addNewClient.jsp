@@ -11,7 +11,7 @@
     <title>Adding a New User</title>
 </head>
 <body>
-<form action="addNewUser" method="post">
+<form action="addNewClient" method="post">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required />
   <br/>

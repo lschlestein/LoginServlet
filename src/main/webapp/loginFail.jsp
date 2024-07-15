@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<h1>Couldn't find #${user.email}# in database. Try again!</h1>
+<h1>Couldn't find ${client.email} in database. Try again!</h1>
 
 <a href="login.jsp">Login</a>
 

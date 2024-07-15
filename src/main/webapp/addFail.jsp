@@ -11,7 +11,7 @@
     <title>Error Adding New User</title>
 </head>
 <body>
-<h1>User #${user.name} already exist on database!</h1>
+<h1>Client ${client.name} with email ${client.email} already exists on database!</h1>
 
 </body>
 </html>
