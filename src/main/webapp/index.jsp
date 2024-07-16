@@ -9,6 +9,6 @@
 </h1>
 <br/>
 <a href="/login.jsp">Login:</a>
-<a href="addNewClient.jsp">Add New Client:</a>
+<a href="/addNewClient.jsp">Add New Client:</a>
 </body>
 </html>

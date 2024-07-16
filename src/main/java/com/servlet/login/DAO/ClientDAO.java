@@ -61,11 +61,15 @@ public class ClientDAO {
     }
 
     public boolean existsByNameAndEmail(Client client) {
-        List<Client> clients = findAll();
-        if (clients.contains(client)) {
-            return true;
+        Client existingClient;
+        try (Session session = factory.openSession()) {
+            List<Client> clientList = session.createQuery(" from Client where email = :email or name = :name").
+                    setParameter("email", client.getEmail()).setParameter("name", client.getName()).getResultList();
+            if (!clientList.isEmpty()) {
+                return true;
+            }
+            return false;
         }
-        return false;
     }
 
     public Client findByNameAndEmail(Client client) {

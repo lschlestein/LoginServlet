@@ -12,6 +12,9 @@
 </head>
 <body>
 <h1>Client ${client.name} with email ${client.email} already exists on database!</h1>
-
+<a href="/login.jsp">Login</a>
+</br>
+<a href="/addNewClient.jsp">Add New Client:</a>
+</br>
 </body>
 </html>
